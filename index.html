@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Card</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="/js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/cafa464828.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button class="cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart__message" id="js--cart__message">0</span>
+    </button>
+    <section class="shoppingCartModal a-popup--2 ">
+        <ul class="shoppingCartModal__list">
+            <li class="shoppingCartModal__listItem">
+                <img src="/img/buzz.webp" alt="">
+                <p>Buzz Lightyear</p>
+                <p id="js--buzz-amount"></p>
+            </li>
+            <li class="shoppingCartModal__listItem">
+                <img src="/img/ironman.JPG" alt="">
+                <p>Ironman</p>
+                <p id="js--ironman-amount"></p>
+            </li>
+            <li class="shoppingCartModal__listItem">
+                <img src="/img/769244C01_RGB.JPG" alt="">
+                <p>C3PO</p>
+                <p id="js--c3po-amount"></p>
+            </li>
+        </ul>
+    </section>
+    <main>
+        <ul class="games">
+            <li class="game game--first a-popup">
+                <figure class="game__figure">
+                    <img src="/img/buzz.webp" alt="">
+                </figure>
+                <section class="game__body">
+                    <h2>€49</h2>
+                    <h3>Buzz Lightyear - Pixar</h3>
+                    <div>★★★★★</div>
+                    <button class="add-to-cart" data-item="BUZZLIGHTYEAR">Add to cart</button>
+                </section>
+            </li>
+            <li class="game game--second a-popup">
+                <figure class="game__figure">
+                    <img src="/img/ironman.JPG" alt="">
+                </figure>
+                <section class="game__body">
+                    <s>€59</s>
+                    <h2>€39</h2>
+                    <h3>Ironman - Marvel</h3>
+                    <div>★★★★★</div>
+                    <button class="add-to-cart" data-item="IRONMAN">Add to cart</button>
+                </section>
+            </li>
+            <li class="game game--third a-popup">
+                <figure class="game__figure">
+                    <img src="/img/769244C01_RGB.JPG" alt="">
+                </figure>
+                <section class="game__body">
+                    <h2>€49</h2>
+                    <h3>C3PO - Star Wars</h3>
+                    <div>★★★★★</div>
+                    <button class="add-to-cart" data-item="C3PO">Add to cart</button>
+                </section>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>
