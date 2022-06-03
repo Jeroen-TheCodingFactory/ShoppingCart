@@ -23,11 +23,14 @@ cart.onclick = function () {
         document.getElementsByTagName("main")[0].style.display = "none";
         modalIsShown = true;
         updateQuantity();
+        window.scrollTo(0,0);
         return;
     }
     document.getElementsByClassName("shoppingCartModal")[0].style.display = "none";
     document.getElementsByTagName("main")[0].style.display = "block";
     modalIsShown = false;
+    window.scrollTo(0,0);
+
 }
 
 /* functions that writes item to vars */

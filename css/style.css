@@ -13,9 +13,12 @@ html {
 }
 
 body {
-    background: #FEAC5E;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #FEAC5E;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +26,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     padding: 4rem;
-    width:100%;
+    width: 100%;
 }
 
 main {
@@ -33,7 +36,6 @@ main {
 
 .games {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50rem 50rem;
     gap: 1rem;
@@ -54,12 +56,6 @@ main {
     animation-fill-mode: backwards;
 }
 
-.a-popup--2 {
-    animation-name: popup2;
-    animation-duration: 0.8s;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation-fill-mode: backwards;
-}
 
 .game--first {
     grid-column: 1 /2;
@@ -159,7 +155,8 @@ button:hover {
     top: 0;
     right: 0;
     border-radius: 50%;
-    background: linear-gradient(to left, #4BC0C8, #C779D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, #4BC0C8, #C779D0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     border: 0.2rem solid white;
     display: flex;
@@ -169,12 +166,7 @@ button:hover {
 }
 
 .shoppingCartModal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background: white;
-    z-index: 1;
     width: 70%;
     height: 80%;
     background: #F6F6F6;
@@ -186,7 +178,7 @@ button:hover {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, 20rem);
 }
 
 .shoppingCartModal__listItem {
@@ -202,57 +194,47 @@ button:hover {
 
 .shoppingCartModal__listItem img {
     height: 100%;
+    width:auto;
     object-fit: contain;
 }
 
 @media screen and (max-width:62.5rem) {
-    .games {
-        width: 100%;
-        height: 100%;
+    body{
+        padding:1rem;
     }
-
-    .shoppingCartModal {
-        width: 100%;
-        height: 100%;
+    main{
+        width:100%;
     }
-
-    .shoppingCartModal__listItem {
+    .shoppingCartModal{
+        width:100%;
+    }
+    .shoppingCartModal__list{
+        grid-template-rows: repeat(3, 40rem);
+    }
+    .shoppingCartModal__listItem{
         flex-direction: column;
+        gap:2rem;
+        padding-bottom:2rem;
     }
-
     .shoppingCartModal__listItem img {
-        width: 100%;
-    }
-
-    .a-popup, .a-popup--2 {
-        animation-name: "no";
-    }
-}
-
-@media screen and (max-width:46.687rem) {
-    body {
-        padding: 1rem;
-    }
-
-    main {
-        width: 100%;
         height: 100%;
+        width:100%;
+        object-fit: contain;
     }
-
     .games {
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 50rem 50rem 50rem;
+        gap: 1rem;
     }
-
-    .game--first, .game--second, .game--third {
+    .game{
         grid-column: span 1;
         grid-row: span 1;
     }
-
-    .shoppingCartModal__listItem {
-        gap: 2rem
+    .a-popup{
+        animation-name: "no-animation";
+        animation-duration:0s;
     }
-
 }
 
 @keyframes popup {
@@ -268,15 +250,3 @@ button:hover {
     }
 }
 
-@keyframes popup2 {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -50%) translateY(2rem);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%) translateY(0rem);
-
-    }
-}
