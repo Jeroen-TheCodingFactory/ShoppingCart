@@ -11,6 +11,7 @@ function setup(){
             addToCart(addToCartButtons[i].dataset.item);
         }
     }
+    document.getElementById("js--arrow").style.display="none";
 }
 
 setup();
@@ -24,11 +25,17 @@ cart.onclick = function () {
         modalIsShown = true;
         updateQuantity();
         window.scrollTo(0,0);
+        document.getElementById("js--arrow").style.display="block";
+        document.getElementById("js--shopping").style.display="none";
+        document.getElementById("js--cart__message").style.display = "none";
         return;
     }
     document.getElementsByClassName("shoppingCartModal")[0].style.display = "none";
     document.getElementsByTagName("main")[0].style.display = "block";
     modalIsShown = false;
+    document.getElementById("js--arrow").style.display="none";
+    document.getElementById("js--shopping").style.display="block";
+    document.getElementById("js--cart__message").style.display = "block";
     window.scrollTo(0,0);
 
 }
@@ -55,7 +62,7 @@ function addToCart(item) {
             popupOpen = false;
         },2000);
     }
-  
+    
     updateCartMessage(buzzLightyear + ironman + c3po);
 }
 
