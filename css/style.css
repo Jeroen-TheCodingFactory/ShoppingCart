@@ -257,7 +257,7 @@ button:hover {
         width:100%;
     }
     .shoppingCartModal__list{
-        grid-template-rows: repeat(3, 40rem);
+        grid-template-rows: repeat(3, 65rem);
     }
     .shoppingCartModal__listItem{
         flex-direction: column;
@@ -272,7 +272,7 @@ button:hover {
     .games {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 50rem 50rem 50rem;
+        grid-template-rows: 65rem 65rem 65rem;
         gap: 1rem;
     }
     .game{
