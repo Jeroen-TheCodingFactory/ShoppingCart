@@ -33,6 +33,7 @@ cart.onclick = function () {
 
 }
 
+let popupOpen = false;
 /* functions that writes item to vars */
 function addToCart(item) {
     switch(item){
@@ -46,6 +47,15 @@ function addToCart(item) {
             c3po += 1;
             break;
     }
+    if(popupOpen === false){
+        popupOpen = true;
+        document.getElementById("js--popup").style.display = "flex";
+        setTimeout(function(){
+            document.getElementById("js--popup").style.display = "none";
+            popupOpen = false;
+        },2000);
+    }
+  
     updateCartMessage(buzzLightyear + ironman + c3po);
 }
 
